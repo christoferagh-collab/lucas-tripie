@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas, regresame mi tripie</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .contenedor {
+        max-width: 750px;
+        margin: 80px auto;
+        padding: 30px;
+    }
+
+    h1 {
+        color: #ff3333;
+        font-size: 42px;
+    }
+
+    p {
+        font-size: 23px;
+        line-height: 1.6;
+    }
+
+    .mensaje {
+        background: #252525;
+        padding: 30px;
+        border-radius: 20px;
+        border: 2px solid #ff3333;
+        box-shadow: 0 0 20px #660000;
+    }
+
+    button {
+        padding: 17px 25px;
+        margin: 12px;
+        border: none;
+        border-radius: 12px;
+        background: #d00000;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #ff3333;
+        transform: scale(1.05);
+    }
+
+    .sonidos {
+        margin-top: 35px;
+    }
+
+    footer {
+        margin-top: 50px;
+        color: gray;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="mensaje">
+
+        <h1>😭 LUCAS, REGRESAME MI TRIPIÉ 😭</h1>
+
+        <p>
+            Lucas regresame mi tripie porfavor.
+            Te juro que si me lo das grabaremos juntos,
+            pero regresamelo porfavor.
+        </p>
+
+        <h1>LO OCUPO MAÑANA</h1>
+
+        <p>
+            Si no me lo das, esta página estará activa
+            hasta que me lo regreses.
+        </p>
+
+        <h1>YA REGRESAMELO PORFAVOR.</h1>
+
+        <p>Atentamente: un creador de contenido sin trípode. 💔</p>
+
+    </div>
+
+    <div class="sonidos">
+
+        <h2>🎵 BOTONES DE EMERGENCIA 🎵</h2>
+
+        <button onclick="reproducir('mambo')">
+            🔊
+        </button>
+
+        <button onclick="reproducir('hachimi')">
+            🔊 
+        </button>
+
+      
+
+    </div>
+
+    <footer>
+        Página oficialmente dedicada a la recuperación del trípode.
+        <br>Lucas, todavía estamos a tiempo de resolver esto.
+    </footer>
+
+</div>
+
+<audio id="hachimi" src="mambo.mp3"></audio>
+<audio id="mambo" src="hachimi.mp3"></audio>
+
+<script>
+    function reproducir(nombre) {
+        detener();
+
+        let audio = document.getElementById(nombre);
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function detener() {
+        document.querySelectorAll("audio").forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    }
+</script>
+
+</body>
+</html>
